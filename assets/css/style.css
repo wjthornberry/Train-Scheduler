@@ -1,0 +1,17 @@
+.container {
+    min-width: 800px;
+}
+
+.jumbotron {
+    min-width: 800px;
+    color: snow;
+    background-color: #337AB7;
+}
+body {
+    background: url('../img/') no-repeat center center fixed; 
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
