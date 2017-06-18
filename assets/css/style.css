@@ -1,17 +1,23 @@
+body {
+    background: url('../img/') no-repeat center center fixed; 
+    font-family:'Monsterrat', sans-serif;
+}
+.btn{
+    margin-top: 10px;
+}
 .container {
     min-width: 800px;
 }
-
 .jumbotron {
     min-width: 800px;
     color: snow;
     background-color: #337AB7;
 }
-body {
-    background: url('../img/') no-repeat center center fixed; 
+label {
+    margin-top: 5px;
 }
-
 table {
     border-collapse: separate;
     border-spacing: 5px;
 }
+
