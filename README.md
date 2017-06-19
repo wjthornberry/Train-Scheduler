@@ -1,7 +1,7 @@
 # Train-Scheduler
 Looking for the new, best way to keep all of your train schedules in one tidy place? Well, look no more! Here's a dynamic web app that utilizes Firebase and Moment.js to allow you to add and view train schedules to your heart's content. All aboard!
 
-[View Project.] (www.jakethornberry.net/)
+[View Project.](www.jakethornberry.net/Train-Scheduler)
 
 <b>Features</b>
 <ul>
