@@ -11,6 +11,58 @@ $(document).ready(function(){
   };
   firebase.initializeApp(config);
 
+  // start Google auth
+
+    $('.content').hide();
+
+  // Auth using a popup.
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  $(document).on('click', '.signIn', function() {
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+     // This gives you a Google Access Token. You can use it to access the Google API.
+     var token = result.credential.accessToken;
+     // The signed-in user info.
+     var user = result.user;
+     $('.content').show();
+     loggedIn();
+    });
+    $(this).removeClass('signIn')
+      .addClass('signOut')
+      .html('Sign Out Of Google');
+  });
+
+  $(document).on('click', '.signOut', function () {
+    firebase.auth().signOut().then(function() {
+      $('.content').hide();
+    }, function(error) {
+      // An error happened.
+    });
+    $(this).removeClass('signOut')
+      .addClass('signIn')
+      .html('Sign In With Google To See Schedule');
+  });
+
+    // $(this).removeClass('signIn')
+    //   .addClass('signOut')
+    //   .html('Sign Out Of Google');
+  });
+
+  // $(document).on('click', '.signOut', function () {
+  //   firebase.auth().signOut().then(function() {
+  //     $('.content').hide();
+  //   }, function(error) {
+  //     // An error happened.
+  //   });
+  //   $(this).removeClass('signOut')
+  //     .addClass('signIn')
+  //     .html('Sign In With Google To See Schedule');
+  // });
+
+  // end Google auth
+
+function loggedIn() {
+
 // Create a variable to reference Firebase's database
 var database = firebase.database();
 
@@ -68,4 +120,4 @@ database.ref().on("child_added", function(childSnapshot) {
 	$trainRow.appendTo($trainBody);
 
 });
-});
+}
