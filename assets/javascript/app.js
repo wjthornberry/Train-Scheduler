@@ -43,21 +43,21 @@ $(document).ready(function(){
       .html('Sign In With Google To See Schedule');
   });
 
-    // $(this).removeClass('signIn')
-    //   .addClass('signOut')
-    //   .html('Sign Out Of Google');
+    $(this).removeClass('signIn')
+      .addClass('signOut')
+      .html('Sign Out Of Google');
   });
 
-  // $(document).on('click', '.signOut', function () {
-  //   firebase.auth().signOut().then(function() {
-  //     $('.content').hide();
-  //   }, function(error) {
-  //     // An error happened.
-  //   });
-  //   $(this).removeClass('signOut')
-  //     .addClass('signIn')
-  //     .html('Sign In With Google To See Schedule');
-  // });
+  $(document).on('click', '.signOut', function () {
+    firebase.auth().signOut().then(function() {
+      $('.content').hide();
+    }, function(error) {
+      // An error happened.
+    });
+    $(this).removeClass('signOut')
+      .addClass('signIn')
+      .html('Sign In With Google To See Schedule');
+  });
 
   // end Google auth
 
