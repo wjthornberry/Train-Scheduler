@@ -14,28 +14,32 @@
         <h1 class="text-center">Shining Time Station Train Schedule</h1>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row content">
             <!--Current train schedule-->
             <div class="col-xs-10 col-xs-offset-1">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title text-center">Train Schedule</h4>
                     </div>
-                    <div class="panel-body">
-                        <table class="train-schedule">
-                            <tr>
-                                <th class="col-xs-3">Train</th>
-                                <th class="col-xs-2">Destination</th>
-                                <th class="col-xs-2">Frequency (min)</th>
-                                <th class="col-xs-3">Next Arrival</th>
-                                <th class-"col-xs-2">Minutes Away</th>
-                            </tr>
+                    <div class="panel-body table-responsive">
+                        <table class="table">
+                            <thead>
+                                <th class="text-center">Train</th>
+                                <th class="text-center">Destination</th>
+                                <th class="text-center">Frequency</th>
+                                <th class="text-center">Next Arrival</th>
+                                <th class-"text-center">Minutes Away</th>
+                                <th></th>
+                            </thead>
+                            <tbody class="text-center">
+                            
+                            </tbody>
                         </table>
                     </div><!--panel body-->
                 </div><!--panel default-->
             </div><!--col-xs-10-->
         </div><!--row-->
-        <div class="row">
+        <div class="row content">
             <!--Input train schedule-->
             <div class="col-xs-10 col-xs-offset-1">
                 <div class="panel panel-primary">
@@ -43,25 +47,33 @@
                         <h4 class="panel-title text-center">Add Train</h4>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form>
                             <div class-"form-group">
-                                <label for="text">Train Name</label>
-                                <input placeholder="Thomas the Tank Engine" type="text" class="form-control" id="input-name">
-                                <label for="text">Destination</label>
-                                <input placeholder="The Isle of Sodor" type="text" class="form-control" id="input-destination">
-                                <label for="text">First Train Time</label>
-                                <input placeholder="In military time (e.g., 09:00 = 9 am; 13:00 = 1 pm)" type="text" class="form-control" id="input-first-train-time">
-                                <label for="text">Frequency (in minutes)</label>
-                                <input placeholder="15" type="text" class="form-control" id="input-frequency">
+                                <label for="trainName">Train Name</label>
+                                <input placeholder="Thomas the Tank Engine" type="text" class="form-control" id="trainName">
                             </div>
-                            <button type="submit" class="btn btn-primary" id="input-train">Submit</button>
+                            <div class="form-group">
+                                <label for="trainDestination">Destination</label>
+                                <input placeholder="The Isle of Sodor" type="text" class="form-control" id="trainDestination">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstTrain">First Train Time</label>
+                                <input placeholder="In military time (e.g., 09:00 = 9 am; 13:00 = 1 pm)" type="text" class="form-control" id="firstTrain">
+                            </div>
+                            <div class="form-group">
+                                <label for="trainFrequency">Frequency (in minutes)</label>
+                                <input placeholder="15" type="text" class="form-control" id="Frequency">
+                            </div>
+                            
+                            <button type="submit" class="btn submit">Submit</button>
+                            <button type="reset" class="btn reset">Clear</button>
                         </form>
                     </div><!--Panel-body-->
                 </div><!--Panel-default-->
             </div><!--column-->
         </div><!--row-->
     </div><!--container-->
-    
+
     <footer class="footer page-footer text-center">
     <div class="footer-copyright">
         <div class="footer-container">
@@ -75,6 +87,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script src="javascript/app.js"></script>
+<script src="./assets/javascript/app.js"></script>
 </body>
 </html>
