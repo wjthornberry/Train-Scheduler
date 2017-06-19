@@ -1,5 +1,5 @@
 body {
-    background: url('../img/') no-repeat center center fixed; 
+    background: url('../images/tte.jpg') no-repeat center center fixed; 
     font-family:'Monsterrat', sans-serif;
 }
 .btn{
@@ -7,6 +7,12 @@ body {
 }
 .container {
     min-width: 800px;
+}
+footer{
+   background-color: #337AB7;
+   color: white;
+   padding-top: 10px;
+   margin-top: 0:
 }
 .jumbotron {
     min-width: 800px;

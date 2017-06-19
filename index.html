@@ -10,73 +10,68 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="jumbotron">
-        <h1 class="text-center">Shining Time Station Train Schedule</h1>
-    </div>
     <div class="container">
-        <div class="row content">
-            <!--Current train schedule-->
-            <div class="col-xs-10 col-xs-offset-1">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title text-center">Train Schedule</h4>
+        <div class="jumbotron">
+            <h1 class="text-center">Shining Time Station Train Schedule</h1>
+        </div>
+        <div class="container">
+            <div class="row content">
+                <!--Current train schedule-->
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-center">Train Schedule</h4>
+                        </div>
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Train</th>
+                                        <th class="text-center">Destination</th>
+                                        <th class="text-center">Frequency</th>
+                                        <th class="text-center">Next Arrival</th>
+                                        <th class-"text-center">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="trainRows">
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="panel-body table-responsive">
-                        <table class="table">
-                            <thead>
-                                <th class="text-center">Train</th>
-                                <th class="text-center">Destination</th>
-                                <th class="text-center">Frequency</th>
-                                <th class="text-center">Next Arrival</th>
-                                <th class-"text-center">Minutes Away</th>
-                                <th></th>
-                            </thead>
-                            <tbody class="text-center">
-                            
-                            </tbody>
-                        </table>
-                    </div><!--panel body-->
-                </div><!--panel default-->
-            </div><!--col-xs-10-->
-        </div><!--row-->
-        <div class="row content">
-            <!--Input train schedule-->
-            <div class="col-xs-10 col-xs-offset-1">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title text-center">Add Train</h4>
-                    </div>
-                    <div class="panel-body">
-                        <form>
-                            <div class-"form-group">
-                                <label for="trainName">Train Name</label>
-                                <input placeholder="Thomas the Tank Engine" type="text" class="form-control" id="trainName">
-                            </div>
-                            <div class="form-group">
-                                <label for="trainDestination">Destination</label>
-                                <input placeholder="The Isle of Sodor" type="text" class="form-control" id="trainDestination">
-                            </div>
-                            <div class="form-group">
-                                <label for="firstTrain">First Train Time</label>
-                                <input placeholder="In military time (e.g., 09:00 = 9 am; 13:00 = 1 pm)" type="text" class="form-control" id="firstTrain">
-                            </div>
-                            <div class="form-group">
-                                <label for="trainFrequency">Frequency (in minutes)</label>
-                                <input placeholder="15" type="text" class="form-control" id="Frequency">
-                            </div>
-                            
-                            <button type="submit" class="btn submit">Submit</button>
-                            <button type="reset" class="btn reset">Clear</button>
-                        </form>
-                    </div><!--Panel-body-->
-                </div><!--Panel-default-->
-            </div><!--column-->
-        </div><!--row-->
-    </div><!--container-->
-
-    <!--<div class="navbar-fixed-bottom footer text-center">
-        <p>&copy; Jake Thornberry 2017 | <a id="portfolio" href="http://www.jakethornberry.net" target="_blank">Portfolio</a> | <a href="https://github.com/wjthornberry/Train-Scheduler" target="_blank">GitHub Repo</a></p>
-    </div>-->
+                </div>
+            </div>
+            <div class="row content">
+                <!--Input train schedule-->
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-center">Add Train</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class-"form-group">
+                                    <label for="trainName">Train Name</label>
+                                    <input placeholder="Thomas the Tank Engine" type="text" class="form-control" id="trainNameInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="trainDestination">Destination</label>
+                                    <input placeholder="The Isle of Sodor" type="text" class="form-control" id="destinationInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstTrain">First Train Time</label>
+                                    <input placeholder="In military time (e.g., 09:00 = 9 am; 13:00 = 1 pm)" type="text" class="form-control" id="startTimeInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="trainFrequency">Frequency (in minutes)</label>
+                                    <input placeholder="15" type="text" class="form-control" id="frequencyInput">
+                                </div>
+                                <button type="submit" class="btn submit">Submit</button>
+                            </form>
+                        </div><!--Panel-body-->
+                    </div><!--Panel-default-->
+                </div><!--column-->
+            </div><!--row-->
+        </div><!--container-->
 
 <!--Firebase-->
 <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
